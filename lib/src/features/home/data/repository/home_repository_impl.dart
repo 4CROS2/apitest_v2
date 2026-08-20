@@ -17,7 +17,6 @@ class HomeRepositoryImpl implements HomeRepository {
       final List<ProductModel> products = response
           .map((product) => ProductModel.fromJson(product))
           .toList();
-      print(products);
       return products;
     } catch (e) {
       throw Exception('Failed to parse data: $e');
